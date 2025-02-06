@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{5879E284-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{F1C78F42-A5FE-408F-B70C-E8E568CBB446}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{A1BD9F23-CC3E-4353-9202-D709108FB99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Infrastructure\Persistence\Persistence.csproj", "{2B6E196C-030C-4DCE-9138-01C88177AF34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E39A5178-514A-44B4-BC1B-6B1211350F4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "Presentation\WebApi\WebApi.csproj", "{36608893-46BF-4AEE-AA43-06F8F0DA6F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +25,21 @@ Global
 		{F1C78F42-A5FE-408F-B70C-E8E568CBB446}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C78F42-A5FE-408F-B70C-E8E568CBB446}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C78F42-A5FE-408F-B70C-E8E568CBB446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6E196C-030C-4DCE-9138-01C88177AF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6E196C-030C-4DCE-9138-01C88177AF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6E196C-030C-4DCE-9138-01C88177AF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6E196C-030C-4DCE-9138-01C88177AF34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36608893-46BF-4AEE-AA43-06F8F0DA6F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36608893-46BF-4AEE-AA43-06F8F0DA6F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36608893-46BF-4AEE-AA43-06F8F0DA6F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36608893-46BF-4AEE-AA43-06F8F0DA6F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F1C78F42-A5FE-408F-B70C-E8E568CBB446} = {5879E284-0E1C-47C7-AC7C-67CF94CC2742}
+		{2B6E196C-030C-4DCE-9138-01C88177AF34} = {A1BD9F23-CC3E-4353-9202-D709108FB99D}
+		{36608893-46BF-4AEE-AA43-06F8F0DA6F2D} = {E39A5178-514A-44B4-BC1B-6B1211350F4A}
 	EndGlobalSection
 EndGlobal
