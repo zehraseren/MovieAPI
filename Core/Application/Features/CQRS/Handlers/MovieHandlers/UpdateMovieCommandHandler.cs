@@ -1,5 +1,5 @@
-﻿using Application.Features.CQRS.Commands.MovieCommands;
-using Persistence.Context;
+﻿using Persistence.Context;
+using Application.Features.CQRS.Commands.MovieCommands;
 
 namespace Application.Features.CQRS.Handlers.MovieHandlers
 {
@@ -12,7 +12,7 @@ namespace Application.Features.CQRS.Handlers.MovieHandlers
             _context = context;
         }
 
-        public async void Handle(UpdateMovieCommand command)
+        public async Task Handle(UpdateMovieCommand command)
         {
             var value = await _context.Movies.FindAsync(command.MovieId);
             value.Title = command.Title;

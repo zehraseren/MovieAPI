@@ -2,6 +2,11 @@
 {
     public class GetCategoryByIdQuery
     {
-        public int CategoryId { get; set; }
+        public GetCategoryByIdQuery(int id)
+        {
+            Id = id;
+        }
+
+        public int Id { get; set; }
     }
 }

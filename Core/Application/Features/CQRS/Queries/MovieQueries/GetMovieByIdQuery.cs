@@ -2,6 +2,11 @@
 {
     public class GetMovieByIdQuery
     {
-        public int MovieId { get; set; }
+        public GetMovieByIdQuery(int id)
+        {
+            Id = id;
+        }
+
+        public int Id { get; set; }
     }
 }

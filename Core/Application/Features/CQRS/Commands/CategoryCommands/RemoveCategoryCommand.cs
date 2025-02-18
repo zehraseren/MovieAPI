@@ -2,6 +2,11 @@
 {
     public class RemoveCategoryCommand
     {
-        public int CategoryId { get; set; }
+        public RemoveCategoryCommand(int id)
+        {
+            Id = id;
+        }
+
+        public int Id { get; set; }
     }
 }

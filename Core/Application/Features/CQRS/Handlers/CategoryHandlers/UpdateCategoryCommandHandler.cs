@@ -12,7 +12,7 @@ namespace Application.Features.CQRS.Handlers.CategoryHandlers
             _context = context;
         }
 
-        public async void Hanlde(UpdateCategoryCommand command)
+        public async Task Handle(UpdateCategoryCommand command)
         {
             var value = await _context.Categories.FindAsync(command.CategoryId);
             value.CategoryName = command.CategoryName;
