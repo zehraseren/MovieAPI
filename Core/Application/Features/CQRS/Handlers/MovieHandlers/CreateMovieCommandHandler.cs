@@ -13,7 +13,7 @@ namespace Application.Features.CQRS.Handlers.MovieHandlers
             _context = context;
         }
 
-        public async Task Hanlde(CreateMovieCommand command)
+        public async Task Handle(CreateMovieCommand command)
         {
             _context.Movies.Add(new Movie
             {
