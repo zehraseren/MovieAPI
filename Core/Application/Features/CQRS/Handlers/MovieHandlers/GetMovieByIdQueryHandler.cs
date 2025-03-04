@@ -15,7 +15,7 @@ namespace Application.Features.CQRS.Handlers.MovieHandlers
 
         public async Task<GetMovieByIdQueryResult> Handle(GetMovieByIdQuery query)
         {
-            var value = await _context.Movies.FindAsync(query.MovieId);
+            var value = await _context.Movies.FindAsync(query.Id);
 
             return new GetMovieByIdQueryResult
             {

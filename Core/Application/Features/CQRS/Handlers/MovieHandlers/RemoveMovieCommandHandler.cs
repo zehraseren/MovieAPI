@@ -14,7 +14,7 @@ namespace Application.Features.CQRS.Handlers.MovieHandlers
 
         public async Task Handle(RemoveMovieCommand command)
         {
-            var value = await _context.Movies.FindAsync(command.MovieId);
+            var value = await _context.Movies.FindAsync(command.Id);
             _context.Movies.Remove(value);
             await _context.SaveChangesAsync();
         }

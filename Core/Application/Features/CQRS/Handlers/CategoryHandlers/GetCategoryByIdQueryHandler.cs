@@ -15,7 +15,7 @@ namespace Application.Features.CQRS.Handlers.CategoryHandlers
 
         public async Task<GetCategoryByIdQueryResult> Handle(GetCategoryByIdQuery query)
         {
-            var value = await _context.Categories.FindAsync(query.CategoryId);
+            var value = await _context.Categories.FindAsync(query.Id);
 
             return new GetCategoryByIdQueryResult
             {
