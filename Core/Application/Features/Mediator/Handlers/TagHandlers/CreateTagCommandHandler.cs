@@ -16,7 +16,7 @@ public class CreateTagCommandHandler : IRequestHandler<CreateTagCommand>
 
     public async Task Handle(CreateTagCommand request, CancellationToken cancellationToken)
     {
-        _context.Tags.Add(new Tag
+        await _context.Tags.AddAsync(new Tag
         {
             Title = request.Title
         });

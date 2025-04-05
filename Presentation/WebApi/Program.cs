@@ -1,24 +1,16 @@
 using Persistence.Context;
+using Application.Services;
+using Application.Container;
 using Microsoft.OpenApi.Models;
-using Application.Features.CQRS.Handlers.MovieHandlers;
-using Application.Features.CQRS.Handlers.CategoryHandlers;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<MovieContext>();
 
-builder.Services.AddScoped<GetMovieQueryHandler>();
-builder.Services.AddScoped<GetMovieByIdQueryHandler>();
-builder.Services.AddScoped<CreateMovieCommandHandler>();
-builder.Services.AddScoped<RemoveMovieCommandHandler>();
-builder.Services.AddScoped<UpdateMovieCommandHandler>();
+builder.Services.ContainerDependencies();
 
-builder.Services.AddScoped<GetCategoryQueryHandler>();
-builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
-builder.Services.AddScoped<CreateCategoryCommandHandler>();
-builder.Services.AddScoped<RemoveCategoryCommandHandler>();
-builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services.AddApplicationService(builder.Configuration);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

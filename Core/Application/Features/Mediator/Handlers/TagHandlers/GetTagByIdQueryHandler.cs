@@ -19,6 +19,7 @@ public class GetTagByIdQueryHandler : IRequestHandler<GetTagByIdQuery, GetTagByI
         var value = await _context.Tags.FindAsync(request.Id);
         return new GetTagByIdQueryResult
         {
+            TagId = value.TagId,
             Title = value.Title
         };
     }

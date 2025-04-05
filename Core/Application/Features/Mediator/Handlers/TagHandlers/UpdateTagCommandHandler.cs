@@ -17,6 +17,6 @@ public class UpdateTagCommandHandler : IRequestHandler<UpdateTagCommand>
     {
         var value = await _context.Tags.FindAsync(request.TagId);
         value.Title = request.Title;
-        _context.Tags.Update(value);
+        await _context.SaveChangesAsync();
     }
 }
