@@ -16,7 +16,7 @@ public class CreateCastCommandHandler : IRequestHandler<CreateCastCommand>
 
     public async Task Handle(CreateCastCommand request, CancellationToken cancellationToken)
     {
-        _context.Casts.Add(new Cast
+        await _context.Casts.AddAsync(new Cast
         {
             Title = request.Title,
             Name = request.Name,
@@ -25,7 +25,6 @@ public class CreateCastCommandHandler : IRequestHandler<CreateCastCommand>
             Overview = request.Overview,
             Biography = request.Biography,
         });
-
         await _context.SaveChangesAsync();
     }
 }

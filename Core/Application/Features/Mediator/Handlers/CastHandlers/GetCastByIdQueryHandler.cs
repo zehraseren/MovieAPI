@@ -19,6 +19,7 @@ public class GetCastByIdQueryHandler : IRequestHandler<GetCastByIdQuery, GetCast
         var value = await _context.Casts.FindAsync(request.Id);
         return new GetCastByIdQueryResult
         {
+            CastId = value.CastId,
             Title = value.Title,
             Name = value.Name,
             Surname = value.Surname,
