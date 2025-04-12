@@ -6,9 +6,9 @@ public class MovieController : Controller
 {
     public IActionResult MovieList()
     {
-        ViewBag.title = "Film Listesi";
-        ViewBag.navbarName = "Ana Sayfa";
-        ViewBag.subtitle = "Tüm Filmler";
+        ViewBag.mainTitle = "FİLM LİSTESİ";
+        ViewBag.navbarName = "ANA SAYFA";
+        ViewBag.subtitle = "TÜM FİLMLER";
         return View();
     }
 }
