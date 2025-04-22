@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<ResultMovieDto>
+
+@{
     ViewData["Title"] = "MovieList";
     Layout = "~/Views/UserWebUILayout/UILayout.cshtml";
 }
@@ -21,61 +23,20 @@
                     <a href="~/Film-Review-Movie-Database/movielist.html" class="list"><i class="ion-ios-list-outline active"></i></a>
                     <a href="~/Film-Review-Movie-Database/moviegrid.html" class="grid"><i class="ion-grid"></i></a>
                 </div>
-                <div class="movie-item-style-2">
-                    <img src="~/Film-Review-Movie-Database/images/uploads/mv1.jpg" alt="">
-                    <div class="mv-item-infor">
-                        <h6><a href="~/Film-Review-Movie-Database/moviesingle.html">oblivion <span>(2012)</span></a></h6>
-                        <p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
-                        <p class="describe">Dünyanın en güçlü kahramanları, yaramaz Loki ve uzaylı ordusunun insanlığı köleleştirmesini durdurmak için bir araya gelmeli ve birlikte savaşmayı öğrenmelidir...</p>
-                        <p class="run-time"> Süre: 2s21dk    |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: 1 Mayıs 2015</span></p>
-                        <p>Yönetmen: <a href="#">Joss Whedon</a></p>
-                        <p>Oyuncular: <a href="#">Robert Downey Jr.,</a> <a href="#">Chris Evans,</a> <a href="#">Chris Hemsworth</a></p>
+                @foreach (var item in Model)
+                {
+                    <div class="movie-item-style-2">
+                        <img src="@item.CoverImageUrl" alt="">
+                        <div class="mv-item-infor">
+                            <h6><a href="~/Film-Review-Movie-Database/moviesingle.html">@item.Title <span>(@item.CreatedYear)</span></a></h6>
+                            <p class="rate"><i class="ion-android-star"></i><span>@item.Rating</span> /10</p>
+                            <p class="describe">@item.Description</p>
+                            <p class="run-time"> Süre: @item.Duration Dk   |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: @item.ReleaseDate</span></p>
+                            <p>Yönetmen: <a href="#">Joss Whedon</a></p>
+                            <p>Oyuncular: <a href="#">Robert Downey Jr.,</a> <a href="#">Chris Evans,</a> <a href="#">Chris Hemsworth</a></p>
+                        </div>
                     </div>
-                </div>
-                <div class="movie-item-style-2">
-                    <img src="~/Film-Review-Movie-Database/images/uploads/mv2.jpg" alt="">
-                    <div class="mv-item-infor">
-                        <h6><a href="moviesingle.html">into the wild <span>(2014)</span></a></h6>
-                        <p class="rate"><i class="ion-android-star"></i><span>7.8</span> /10</p>
-                        <p class="describe">Steve Rogers modern dünyadaki rolünü benimsemekte zorlanırken, yeni bir tehditle savaşmak için Kara Dul ile güçlerini birleştirir...</p>
-                        <p class="run-time"> Süre: 2s21dk    |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: 1 Mayıs 2015</span></p>
-                        <p>Yönetmen: <a href="#">Anthony Russo,</a><a href="#">Joe Russo</a></p>
-                        <p>Oyuncular: <a href="#">Chris Evans,</a> <a href="#">Samuel L. Jackson,</a> <a href="#">Scarlett Johansson</a></p>
-                    </div>
-                </div>
-                <div class="movie-item-style-2">
-                    <img src="~/Film-Review-Movie-Database/images/uploads/mv3.jpg" alt="">
-                    <div class="mv-item-infor">
-                        <h6><a href="moviesingle.html">blade runner <span>(2015)</span></a></h6>
-                        <p class="rate"><i class="ion-android-star"></i><span>7.3</span> /10</p>
-                        <p class="describe">Küçülme yeteneğine sahip bir süper kostümle donatılan hırsız Scott Lang, içindeki kahramanı bulmalı ve yardım etmelidir...</p>
-                        <p class="run-time"> Süre: 2s21dk    |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: 1 Mayıs 2015</span></p>
-                        <p>Yönetmen: <a href="#">Peyton Reed</a></p>
-                        <p>Oyuncular: <a href="#">Paul Rudd,</a> <a href="#">Michael Douglas</a></p>
-                    </div>
-                </div>
-                <div class="movie-item-style-2">
-                    <img src="~/Film-Review-Movie-Database/images/uploads/mv4.jpg" alt="">
-                    <div class="mv-item-infor">
-                        <h6><a href="moviesingle.html">Mulholland pride <span>(2013)</span></a></h6>
-                        <p class="rate"><i class="ion-android-star"></i><span>7.2</span> /10</p>
-                        <p class="describe">Tony Stark’ın dünyası Mandarin adlı güçlü bir terörist tarafından altüst edilir ve bu, onu yeniden inşa ve intikam dolu bir yolculuğa sürükler.</p>
-                        <p class="run-time"> Süre: 2s21dk    |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: 1 Mayıs 2015</span></p>
-                        <p>Yönetmen: <a href="#">Shane Black</a></p>
-                        <p>Oyuncular: <a href="#">Robert Downey Jr., </a> <a href="#">Guy Pearce,</a><a href="#">Don Cheadle</a></p>
-                    </div>
-                </div>
-                <div class="movie-item-style-2">
-                    <img src="~/Film-Review-Movie-Database/images/uploads/mv5.jpg" alt="">
-                    <div class="mv-item-infor">
-                        <h6><a href="moviesingle.html">skyfall: evil of boss <span>(2013)</span></a></h6>
-                        <p class="rate"><i class="ion-android-star"></i><span>7.0</span> /10</p>
-                        <p class="describe">Tony Stark’ın dünyası Mandarin adlı güçlü bir terörist tarafından altüst edilir ve bu, onu yeniden inşa ve intikam dolu bir yolculuğa sürükler.</p>
-                        <p class="run-time"> Süre: 2s21dk    |     <span>Yaş Sınırı: 13+</span>    |     <span>Vizyon Tarihi: 1 Mayıs 2015</span></p>
-                        <p>Yönetmen: <a href="#">Alan Taylor</a></p>
-                        <p>Oyuncular: <a href="#">Chris Hemsworth, </a> <a href="#">Natalie Portman,</a><a href="#">Tom Hiddleston</a></p>
-                    </div>
-                </div>
+                }
                 <div class="topbar-filter">
                     <label>Her sayfadaki film sayısı:</label>
                     <select>
