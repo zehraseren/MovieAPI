@@ -15,4 +15,10 @@
     <ProjectReference Include="..\..\Infrastructure\Persistence\Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\CQRS\Commands\UserRegisterCommands\" />
+    <Folder Include="Features\CQRS\Handlers\NewFolder\" />
+    <Folder Include="Features\CQRS\Queries\NewFolder\" />
+  </ItemGroup>
+
 </Project>
