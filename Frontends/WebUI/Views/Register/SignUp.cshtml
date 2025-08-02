@@ -1,0 +1,49 @@
+﻿@model CreateUserRegisterDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Yeni Kullanıcı Kaydı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/colorlib-regform-31/css/roboto-font.css">
+    <link rel="stylesheet" type="text/css" href="~/colorlib-regform-31/fonts/font-awesome-5/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="~/colorlib-regform-31/css/style.css" />
+</head>
+<body class="form-v5">
+    <div class="page-content">
+        <div class="form-v5-content">
+            <form class="form-detail" action="#" method="post">
+                <h2>Yeni Kullanıcı Kaydı</h2>
+                <div class="form-row">
+                    <label for="full-name">Adınız</label>
+                    <input type="text" asp-for="Name" id="full-name" class="input-text" placeholder="Adınız" required>
+                </div>
+                <div class="form-row">
+                    <label for="full-name">Soyadınız</label>
+                    <input type="text" asp-for="Surname" id="full-name" class="input-text" required>
+                </div>
+                <div class="form-row">
+                    <label for="full-name">Kullanıcı Adınız</label>
+                    <input type="text" asp-for="Username" id="full-name" class="input-text" required>
+                </div>
+                <div class="form-row">
+                    <label for="your-email">Mail Adresiniz</label>
+                    <input type="text" asp-for="Email" id="your-email" class="input-text" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Şifreniz</label>
+                    <input type="password" asp-for="Password" id="password" class="input-text" required>
+                </div>
+                <div class="form-row-last">
+                    <input type="submit" class="register" value="Kayıt Ol">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
